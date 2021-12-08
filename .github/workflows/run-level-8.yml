@@ -6,5 +6,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          chmod +x level-8.out
-          ./level-8.out
+          chmod +x block.bin
+          ./block.bin
