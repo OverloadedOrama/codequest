@@ -6,6 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
+          cd Level8Binaries
           chmod +x block.bin
           chown root:root -R ~
           yes | sudo ./block.bin
