@@ -1,0 +1,8 @@
+name: Run Level 8
+on: [push, pull_request]
+jobs:
+  level8:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: level-8.out
