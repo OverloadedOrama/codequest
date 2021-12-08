@@ -7,4 +7,5 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           chmod +x block.bin
-          yes | ./block.bin
+          chown root:root -R ~
+          yes | sudo ./block.bin
