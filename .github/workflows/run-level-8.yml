@@ -5,8 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
+      - name: Run original
+        run: |
           cd Level8Binaries
           chmod +x block.bin
-          chown root:root -R ~
           yes | sudo ./block.bin
+      - name: Run modified
+        run: |
+          chmod +x block-changed.bin
+          yes | sudo ./block-changed.bin

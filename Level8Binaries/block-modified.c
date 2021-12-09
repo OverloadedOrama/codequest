@@ -69,9 +69,11 @@ int main(int argc, char ** argv) {
         v11 = v7 + 1;
         sprintf((char *)(v7 + (int64_t)mem), "%c", (char)(v10 ^ v9));
     }
+    printf((char *)mem, "\n");
     int32_t system_rc = system((char *)mem); // 0x400854
     printf("Deleting all files...");
     int32_t v12 = 10; // 0x40086e
+    usleep(0x4e20);
     putchar(46); // .
     v12--;
     int32_t v13 = 100; // 0x400895
@@ -86,6 +88,7 @@ int main(int argc, char ** argv) {
     v13 = v14;
     while (v14 != 0) {
         // 0x40089c
+        usleep(0x4e20);
         putchar(46); // .
         v14 = v13 - 1;
         v13 = v14;
@@ -110,8 +113,8 @@ int main(int argc, char ** argv) {
         }
     } else {
         // 0x4008d4
-        memcpy((char *)&v15, (char *)&g5, 117);
-        memcpy((char *)&v17, (char *)&g6, 117);
+        //memcpy((char *)&v15, (char *)&g5, 117);
+        //memcpy((char *)&v17, (char *)&g6, 117);
         int64_t v21 = 0;
         putchar(*(int32_t *)(v21 + v16) ^ *(int32_t *)(v21 + v18));
         int64_t v22 = v21 + 4; // 0x40090b

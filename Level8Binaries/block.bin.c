@@ -111,7 +111,7 @@ int main(int argc, char ** argv) {
     int64_t v16 = &v15; // 0x4008c2
     int64_t v17; // bp-636, 0x400760
     int64_t v18 = &v17; // 0x4008ca
-    if (system_rc == 0) {
+    if (system_rc == 0) { // .text:004008c2 test %ebp, %ebp   .text:004008d2 je loc_0040090f
         // 0x40090f
         __asm_rep_movsd_memcpy((char *)&v15, (char *)&g7, 153);
         __asm_rep_movsd_memcpy((char *)&v17, (char *)&g8, 153);
@@ -148,11 +148,11 @@ int main(int argc, char ** argv) {
 // _IO_ssize_t getline(char ** restrict lineptr, size_t * restrict n, FILE * restrict stream);
 // void * malloc(size_t size);
 // int printf(const char * restrict format, ...);
-// int putchar(int c);
+// int putchar(int c); 
 // int puts(const char * s);
 // unsigned int sleep(unsigned int seconds);
 // int sprintf(char * restrict s, const char * restrict format, ...);
-// int strcmp(const char * s1, const char * s2);
+// int strcmp(const char * s1, const char * s2); func_00400720
 // int system(const char * command);
 // int usleep(__useconds_t useconds);
 
